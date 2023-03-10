@@ -8,8 +8,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <link rel="icon" type="image/png" sizes="50x50" href="{{globalRoot}}/img/favicon-50x50.png">
     <link rel="canonical" href="{{canonical}}">
+    {{> css-head}}
+    {{> js-head}}
+    {{> raw-head}}
   </head>
   <body>
+    {{> raw-body}}
     {{{layout.html}}}
-  </body>    
+    {{> js-foot}}
+    {{> raw-foot}}
+  </body>
 </html>

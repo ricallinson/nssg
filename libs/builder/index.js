@@ -30,6 +30,7 @@ function loadListeners(dir) {
 
 function setGlobals() {
     logger.event(`builder.setGlobals`, `Setting global values`);
+    Conf.set('defaultsDir', __dirname);
     Conf.set('buildDir', path.join(Conf.get('root'), BUILD_DIR));
     Conf.set('pagesDir', path.join(Conf.get('root'), PAGES_DIR));
     logger.event(`builder.setGlobals`);
