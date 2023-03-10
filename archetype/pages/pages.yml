@@ -1,0 +1,52 @@
+pageTypes:
+  - page.yml
+  - page.ymal
+  - page.json
+assetsRoot: /assets
+assetsCss:
+  - css
+assetsJs:
+  - js
+assetsImg:
+  - jpeg
+  - jpg
+  - gif
+  - png
+  - webp
+  - svg
+assetsRaw:
+  - html
+  - txt
+page:
+  pathRel: /
+  pathUrl: /
+data:
+  author: nssg
+  lang: en
+  title: My Site
+  description: My first nssg site.
+  # canonical: https://...
+  process:
+    assets:
+      css:
+        link:
+          bootstrap: # Bootstrap
+            src: https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css
+            integrity: sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi
+            crossorigin: anonymous
+            env: ['dev', 'review', 'stage', 'prod', 'all']
+      js:
+        link:
+          jquery: # jQuery Slim
+            src: https://code.jquery.com/jquery-3.6.1.slim.min.js
+            integrity: sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA=
+            crossorigin: anonymous
+            executed: defer
+            head: true
+            env: []
+      raw:
+        insert: # Same processing logic as "link" but simply inserts the raw "value" with no extra markup.
+          anything:
+            value: "<!-- Anything -->"
+            head: false
+            env: ['dev']

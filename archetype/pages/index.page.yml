@@ -1,0 +1,8 @@
+page:
+  tmpl: pages.hb
+data:
+  layout:
+    data:
+      tmpl: layout.hb
+      main:
+        html: <h1>Hello world wide web!</h1>

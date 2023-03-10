@@ -1,0 +1,63 @@
+{
+  "name": "nssg",
+  "version": "0.1.2",
+  "description": "Dynamic Static Site Generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "nyc mocha",
+    "fmt": "eslint --fix './*.js' './**/*.js' './*.json' './**/*.json'",
+    "example": "rm -rf ./example; nssg init -d example; nssg build -d example"
+  },
+  "bin": {
+    "nssg": "./bin/index.js"
+  },
+  "author": "Ric Allinson",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "commander": "^10.0.0",
+    "compression": "^1.7.4",
+    "eslint": "^8.26.0",
+    "eslint-plugin-json": "^3.1.0",
+    "global-conf": "^1.0.1",
+    "handlebars": "^4.7.7",
+    "marked": "^4.2.12",
+    "mocha": "^10.2.0",
+    "nyc": "^15.1.0",
+    "prettyjson": "^1.2.5",
+    "serve-handler": "^6.1.5",
+    "timethat": "^0.0.3",
+    "watch": "^1.0.2",
+    "yaml": "^2.2.1"
+  },
+  "nyc": {
+    "check-coverage": true,
+    "reporter": [
+      "lcov",
+      "text",
+      "text-summary",
+      "html"
+    ],
+    "exclude": [
+      "**/*.mocha.js"
+    ],
+    "report-dir": "./artifacts/coverage/",
+    "statements": 100,
+    "branches": 100,
+    "functions": 100,
+    "lines": 100
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ricallinson/nssg.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ricallinson/nssg/issues"
+  },
+  "homepage": "https://github.com/ricallinson/nssg#readme",
+  "keywords": [
+    "static",
+    "site",
+    "generator"
+  ]
+}

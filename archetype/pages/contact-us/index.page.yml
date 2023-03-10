@@ -1,0 +1,6 @@
+page:
+  tmpl: pages.hb
+data:
+  layout:
+    html: <h1>Contact Us</h1>
+    include: ./email.yaml
