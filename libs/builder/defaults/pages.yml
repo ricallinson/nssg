@@ -1,0 +1,40 @@
+pageTypes:
+  - page.yml
+  - page.ymal
+  - page.json
+assetsRoot: /assets
+assetsCss:
+  - css
+assetsJs:
+  - js
+assetsImg:
+  - jpeg
+  - jpg
+  - gif
+  - png
+  - webp
+  - svg
+assetsRaw:
+  - html
+  - txt
+page:
+  pathRel: /
+  pathUrl: /
+data:
+  author: nssg
+  lang: en
+  # title: My Site
+  # description: My first nssg site.
+  # canonical: https://...
+  process:
+    assets:
+      raw:
+        head:
+          anything:
+            value: "<!-- Anything header -->"
+        body:
+          anything:
+            value: "<!-- Anything body -->"
+        foot:
+          anything:
+            value: "<!-- Anything footer -->"

@@ -2,7 +2,7 @@ const path = require('path');
 
 const Conf = require('global-conf');
 
-const utils = require('../../utils');
+const utils = require('../../../utils');
 
 Conf.listen.set('data.process.loaded', function(loc, val) {
     const pathAbs = Conf.get(Conf.getAncestorLocation(loc, 'page'), 'pathAbs');

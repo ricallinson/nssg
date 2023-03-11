@@ -9,8 +9,9 @@ const utils = require('../utils');
 const serve = require('./serve');
 const Conf = require('global-conf');
 
-const BUILD_DIR = 'build';
+const DEFAULTS_DIR = 'defaults';
 const PAGES_DIR = 'pages';
+const BUILD_DIR = 'build';
 
 function getProjectRoot(dir) {
     try {
@@ -30,7 +31,7 @@ function loadListeners(dir) {
 
 function setGlobals() {
     logger.event(`builder.setGlobals`, `Setting global values`);
-    Conf.set('defaultsDir', __dirname);
+    Conf.set('defaultsDir', path.join(__dirname, DEFAULTS_DIR));
     Conf.set('buildDir', path.join(Conf.get('root'), BUILD_DIR));
     Conf.set('pagesDir', path.join(Conf.get('root'), PAGES_DIR));
     logger.event(`builder.setGlobals`);
@@ -39,6 +40,7 @@ function setGlobals() {
 function loadPagesConfiguration() {
     logger.event(`builder.loadPagesConfiguration`, 'Loading pages.yml');
     Conf.set('source', path.join(Conf.get('root'), 'pages', 'pages.yml'));
+    Conf.load('.', path.join(Conf.get('defaultsDir'), 'pages.yml'));
     Conf.load('.', Conf.get('source'));
     Conf.set('data', {});
     Conf.set('page.pathAbs', Conf.get('root'));
@@ -106,9 +108,9 @@ exports.init = function(dir) {
 exports.build = function(dir) {
     logger.event('builder');
     Conf.set('root', getProjectRoot(path.resolve(dir)));
-    loadListeners(path.join(__dirname, 'listeners'));
-    loadListeners(path.join(Conf.get('root'), 'listeners'));
     setGlobals();
+    loadListeners(path.join(Conf.get('defaultsDir'), 'listeners'));
+    loadListeners(path.join(Conf.get('root'), 'listeners'));
     loadPagesConfiguration();
     loadAllPageConfigurations();
     cleanBuildDir();

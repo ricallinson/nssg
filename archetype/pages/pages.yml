@@ -1,31 +1,7 @@
-pageTypes:
-  - page.yml
-  - page.ymal
-  - page.json
-assetsRoot: /assets
-assetsCss:
-  - css
-assetsJs:
-  - js
-assetsImg:
-  - jpeg
-  - jpg
-  - gif
-  - png
-  - webp
-  - svg
-assetsRaw:
-  - html
-  - txt
-page:
-  pathRel: /
-  pathUrl: /
 data:
-  author: nssg
   lang: en
   title: My Site
   description: My first nssg site.
-  # canonical: https://...
   process:
     assets:
       css:
@@ -34,7 +10,6 @@ data:
             src: https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css
             integrity: sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi
             crossorigin: anonymous
-            env: ['dev', 'review', 'stage', 'prod', 'all']
       js:
         link:
           jquery: # jQuery Slim
@@ -43,15 +18,3 @@ data:
             crossorigin: anonymous
             executed: defer
             head: true
-            env: []
-      raw:
-        head:
-          anything:
-            value: "<!-- Anything header -->"
-        body:
-          anything:
-            value: "<!-- Anything body -->"
-        foot:
-          anything:
-            value: "<!-- Anything footer -->"
-            env: ['dev']

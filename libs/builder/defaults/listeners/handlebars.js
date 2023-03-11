@@ -4,7 +4,7 @@ const path = require('path');
 const Conf = require('global-conf');
 const Handlebars = require('handlebars');
 
-const utils = require('../../utils');
+const utils = require('../../../utils');
 
 function registerPartial(file) {
     if (Conf.get('cache.tmpls', file)) {
