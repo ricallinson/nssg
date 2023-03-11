@@ -5,6 +5,10 @@
 {{/if}}
 {{/each}}
 <!-- CSS Head Inline -->
+{{#if process.assets.css.inline}}
+<style type="text/css">
 {{#each process.assets.css.inline}}
-<style type="text/css">{{{.}}}</style>
+{{{.}}}
 {{/each}}
+</style>
+{{/if}}
