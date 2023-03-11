@@ -1,7 +1,7 @@
 <!-- CSS Head Link -->
 {{#each process.assets.css.link}}
-{{#if src}}
-<link {{#if executed}}{{executed}}{{/if}} href="{{{src}}}" rel="stylesheet" {{#if integrity}}integrity="{{integrity}}"{{/if}} {{#if crossorigin}}crossorigin="{{crossorigin}}"{{/if}}>
+{{#if href}}
+<link {{#if executed}}{{executed}}{{/if}} href="{{{href}}}" rel="stylesheet" {{#if integrity}}integrity="{{integrity}}"{{/if}} {{#if crossorigin}}crossorigin="{{crossorigin}}"{{/if}}>
 {{/if}}
 {{/each}}
 <!-- CSS Head Inline -->

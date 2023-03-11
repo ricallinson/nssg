@@ -21,8 +21,8 @@ page:
   pathRel: /
   pathUrl: /
 data:
-  author: nssg
   lang: en
+  author: nssg
   # title: My Site
   # description: My first nssg site.
   # canonical: https://...
@@ -31,10 +31,10 @@ data:
       raw:
         head:
           anything:
-            value: "<!-- Anything header -->"
+            data: "<!-- Anything header -->"
         body:
           anything:
-            value: "<!-- Anything body -->"
+            data: "<!-- Anything body -->"
         foot:
           anything:
-            value: "<!-- Anything footer -->"
+            data: "<!-- Anything footer -->"

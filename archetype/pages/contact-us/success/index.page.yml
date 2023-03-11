@@ -1,6 +1,0 @@
-page:
-  tmpl: pages.hb
-data:
-  layout:
-    include: ./text.md
-    html: <h1>Thank you!</h1>
