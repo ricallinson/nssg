@@ -1,1 +1,12 @@
-<!-- JS Foot -->
+<!-- JS Foot Link -->
+{{#each process.assets.js.link}}
+{{^if head}}
+{{#if src}}
+<script {{#if executed}}{{executed}}{{/if}} src="{{{src}}}" {{#if integrity}}integrity="{{integrity}}"{{/if}} {{#if crossorigin}}crossorigin="{{crossorigin}}"{{/if}}></script>
+{{/if}}
+{{/if}}
+{{/each}}
+<!-- JS Foot Inline -->
+{{#if process.assets.js.inline}}
+<script type="text/javascript">{{{process.assets.js.inline}}}</script>
+{{/if}}

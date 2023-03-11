@@ -45,8 +45,13 @@ data:
             head: true
             env: []
       raw:
-        insert: # Same processing logic as "link" but simply inserts the raw "value" with no extra markup.
+        head:
           anything:
-            value: "<!-- Anything -->"
-            head: false
+            value: "<!-- Anything header -->"
+        body:
+          anything:
+            value: "<!-- Anything body -->"
+        foot:
+          anything:
+            value: "<!-- Anything footer -->"
             env: ['dev']

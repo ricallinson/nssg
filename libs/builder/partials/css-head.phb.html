@@ -1,1 +1,10 @@
-<!-- CSS Head -->
+<!-- CSS Head Link -->
+{{#each process.assets.css.link}}
+{{#if src}}
+<link {{#if executed}}{{executed}}{{/if}} href="{{{src}}}" rel="stylesheet" {{#if integrity}}integrity="{{integrity}}"{{/if}} {{#if crossorigin}}crossorigin="{{crossorigin}}"{{/if}}>
+{{/if}}
+{{/each}}
+<!-- CSS Head Inline -->
+{{#if process.assets.css.inline}}
+<style type="text/css">{{{process.assets.css.inline}}}</style>
+{{/if}}
