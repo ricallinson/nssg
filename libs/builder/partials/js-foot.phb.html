@@ -7,6 +7,6 @@
 {{/if}}
 {{/each}}
 <!-- JS Foot Inline -->
-{{#if process.assets.js.inline}}
-<script type="text/javascript">{{{process.assets.js.inline}}}</script>
-{{/if}}
+{{#each process.assets.js.inline}}
+<script type="text/javascript">{{{.}}}</script>
+{{/each}}
