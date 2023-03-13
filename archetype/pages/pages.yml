@@ -1,7 +1,17 @@
+page:
+  tmpl: tmpls/pages.hb
 data:
-  lang: en
   title: My Site
   description: My first nssg site.
+  tmpl: tmpls/layout.hb
+  # Data for 'tmpls/layout'.
+  header:
+    tmpl: ./header.hb
+  main:
+    tmpl: tmpls/layout-2-column.hb
+  footer:
+    tmpl: ./footer.hb
+  lang: en
   process:
     assets:
       css:

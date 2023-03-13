@@ -16,6 +16,6 @@ Conf.listen.get('include', function(loc, val) {
     }
     switch (path.extname(val)) {
     case '.md':
-        Conf.set(location, Marked.parse(fs.readFileSync(Conf.get(loc), 'utf8')));
+        Conf.set(location, '<<', 'html', Marked.parse(fs.readFileSync(Conf.get(loc), 'utf8')));
     }
 });

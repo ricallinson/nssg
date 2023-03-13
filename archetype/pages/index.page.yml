@@ -1,10 +1,9 @@
 page:
   tmpl: tmpls/pages.hb
 data:
-  tmpl: tmpls/layout.hb
-  header:
-    tmpl: header.hb
+  # Data for 'main:tmpls/layout-2-column'.
   main:
-    html: "foo"
-  footer:
-    tmpl: footer.hb
+    col-1:
+      tmpl: ./side-menu.hb
+    col-2:
+      include: ./docs/content/docs-getting-started.md
