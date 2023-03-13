@@ -1,9 +1,16 @@
-<header class="container">
+{{{nav.html}}}
+{{#if header.html}}
+<header>
 	{{{header.html}}}
 </header>
-<main class="container">
+{{/if}}
+{{#if main.html}}
+<main class="container-lg">
 	{{{main.html}}}
 </main>
-<footer class="container">
+{{/if}}
+{{#if footer.html}}
+<footer>
 	{{{footer.html}}}
 </footer>
+{{/if}}

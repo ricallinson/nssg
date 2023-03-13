@@ -1,10 +1,12 @@
 page:
   tmpl: tmpls/pages.hb
 data:
-  title: My Site
-  description: My first nssg site.
+  title: "@nssg"
+  description: The worlds finest dynamic static site generator.
   tmpl: tmpls/layout.hb
   # Data for 'tmpls/layout'.
+  nav:
+    tmpl: tmpls/nav.hb
   header:
     tmpl: ./header.hb
   main:

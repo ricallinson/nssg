@@ -5,4 +5,4 @@ data:
   # col-1:
   #   tmpl: ./side-menu.hb
   col-2:
-    include: ./docs/content/home.md
+    include: ./docs/content/docs-about.md
