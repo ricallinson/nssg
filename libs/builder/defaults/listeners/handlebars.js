@@ -28,7 +28,8 @@ Conf.listen.set('tmpl', function(loc, file) {
     try {
         Conf.set('cache.tmpls', file, Handlebars.compile(fs.readFileSync(file, 'utf8').toString()));
     } catch (err) {
-        console.log(err);
+        console.log('[handlebars] File not found', file);
+        process.exit(1);
     }
 });
 

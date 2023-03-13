@@ -2,8 +2,7 @@ page:
   tmpl: tmpls/pages.hb
 data:
   # Data for 'main:tmpls/layout-2-column'.
-  main:
-    col-1:
-      tmpl: ./side-menu.hb
-    col-2:
-      include: ./docs/content/docs-getting-started.md
+  col-1:
+    tmpl: ./side-menu.hb
+  col-2:
+    include: ./docs/content/docs-getting-started.md

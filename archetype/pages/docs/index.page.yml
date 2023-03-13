@@ -3,6 +3,6 @@ page:
 data:
   # Data for 'main:tmpls/layout-2-column'.
   col-1:
-    html: foo
+    tmpl: ./docs-menu.hb
   col-2:
-    include: ./content/docs-getting-started.md
+    include: ./content/docs-about.md

@@ -9,7 +9,7 @@ Conf.listen.get('tmpl', function(loc, val) {
     }
     // Path is relative so change it to absolute path.
     if (val && val[0] === '.') {
-        Conf.set(loc, path.join(Conf.get(Conf.getAncestorLocation(loc, 'pagesDir')), `${val}.html`));
+        Conf.set(loc, path.join(Conf.get(Conf.getAncestorLocation(loc, 'page'), 'pathAbs'), `${val}.html`));
         return;
     }
     // Path is a global template so change it to absolute path.

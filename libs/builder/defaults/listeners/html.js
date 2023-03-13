@@ -7,6 +7,10 @@ function renderSubTemplates(dataLocation) {
             return;
         }
         const tmpl = Conf.get('cache.tmpls', Conf.get(location));
+        if (typeof tmpl !== 'function') {
+            console.log('[page.html] File not found', Conf.get(location));
+            process.exit(1);
+        }
         Conf.set(location, '<<', 'html', tmpl(Conf.get(dataLocation)));
     });
 }

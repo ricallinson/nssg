@@ -39,18 +39,18 @@ function setGlobals() {
 
 function loadPagesConfiguration() {
     logger.event(`builder.loadPagesConfiguration`, 'Loading pages.yml');
-    Conf.set('source', path.join(Conf.get('root'), 'pages', 'pages.yml'));
+    Conf.set('source', path.join(Conf.get('pagesDir'), 'pages.yml'));
     Conf.load('.', path.join(Conf.get('defaultsDir'), 'pages.yml'));
     Conf.load('.', Conf.get('source'));
     Conf.set('data', {});
-    Conf.set('page.pathAbs', Conf.get('root'));
+    Conf.set('page.pathAbs', Conf.get('pagesDir'));
     Conf.set('data.process.loaded', 'data');
     logger.event(`builder.loadPagesConfiguration`);
 }
 
 function loadAllPageConfigurations() {
     logger.event(`builder.loadAllPageConfigurations`, `Setting page values`);
-    utils.getPaths(Conf.get('root'), Conf.get('pageTypes'), true).forEach((file) => {
+    utils.getPaths(Conf.get('pagesDir'), Conf.get('pageTypes'), true).forEach((file) => {
         const key = Conf.normalizeKey(file);
         logger.event(`builder.loadPageConfiguration${key}`, `Processing page configuration`);
         const dir = path.join(path.parse(file.replace(Conf.get('root'), '')).dir);
