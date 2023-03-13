@@ -1,0 +1,8 @@
+page:
+  tmpl: tmpls/pages.hb
+data:
+  # Data for 'main:tmpls/layout-2-column'.
+  col-1:
+    tmpl: ./docs-menu.hb
+  col-2:
+    include: ./content/docs-cli.md

@@ -1,6 +1,6 @@
 pageTypes:
   - page.yml
-  - page.ymal
+  - page.yaml
   - page.json
 assetsRoot: /assets
 assetsCss:
