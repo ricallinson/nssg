@@ -17,7 +17,7 @@ program.command('init')
 
 program.command('build')
     .description('builds the project')
-    .option('-d, --directory <path>', 'directory where the project will be created', 'build')
+    .option('-d, --directory <path>', 'directory of the project to build', './')
     .action((options) => {
         builder.build(options.directory);
     });
