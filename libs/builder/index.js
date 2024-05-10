@@ -77,15 +77,15 @@ function cleanBuildDir() {
 
 function outputPages() {
     logger.event('builder.outputPages');
-    Conf.getDescendantLocations('pages', 'page').forEach(async (location) => {
+    Conf.getDescendantLocations('pages', 'page').forEach(async(location) => {
         const filePath = path.join(Conf.get('buildDir'), Conf.get(location, 'pathUrl'));
         fs.mkdirSync(path.dirname(filePath), { recursive: true });
         const html = await minify(Conf.get(location, 'html') || '', {
-            collapseWhitespace: true,
-            minifyCSS: true,
-            minifyJS: true,
-            preserveLineBreaks: true,
-            removeComments: true,
+            collapseWhitespace:    true,
+            minifyCSS:             true,
+            minifyJS:              true,
+            preserveLineBreaks:    true,
+            removeComments:        true,
             removeEmptyAttributes: true
         });
         fs.writeFileSync(filePath, html);

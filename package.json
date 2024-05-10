@@ -14,8 +14,7 @@
   "author": "Ric Allinson",
   "license": "ISC",
   "dependencies": {
-    "chalk": "^4.1.2",
-    "commander": "^10.0.0",
+    "commander": "^12.0.0",
     "compression": "^1.7.4",
     "eslint": "^8.26.0",
     "eslint-plugin-json": "^3.1.0",
@@ -24,11 +23,12 @@
     "html-minifier-terser": "^7.2.0",
     "marked": "^4.2.12",
     "mocha": "^10.2.0",
+    "npm": "^10.7.0",
     "nyc": "^15.1.0",
     "prettyjson": "^1.2.5",
     "serve-handler": "^6.1.5",
     "timethat": "^0.0.3",
-    "watch": "^1.0.2",
+    "watch": "^0.13.0",
     "yaml": "^2.2.1"
   },
   "nyc": {

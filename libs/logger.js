@@ -15,20 +15,18 @@ but still print console.error
 
 const quiet = process.argv.includes('--quiet');
 
-const chalk = require('chalk');
-
 exports.info = (key, ...args) => {
-    console.log(chalk.blue(`[${key}]`), ...args);
+    console.log(`[${key}]`, ...args);
 };
 
 exports.log = (key, ...args) => {
     if (!quiet) {
-        console.log(chalk.magenta(`[${key}]`), ...args);
+        console.log(`[${key}]`, ...args);
     }
 };
 
 exports.error = (key, ...args) => {
-    console.error(chalk.red(`ERR [${key}]`), ...args);
+    console.error(`ERR [${key}]`, ...args);
 };
 
 exports.event = (key, ...args) => {
